@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+.main {
+    width: 328px;
+    height: 570px;
+    margin: 70px auto;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+
+    &__image {
+        background-image: url('../images/illustration-hero.svg');
+        background-size: cover;
+        height: 162px;
+    }
+    
+    &__title {
+        text-align: center;
+        margin: 24px 0;
+        font-size: 1.4em;
+        color: $Darkblue;
+        font-weight: 900;
+    }
+
+    &__paragraph {
+        text-align: center;
+        color: $Desaturatedblue;
+        margin-bottom: 32px;
+        padding: 0 30px;
+    }
+    &__payment {
+        background-color: $Brightblue;
+        width: 280px;
+        height: 53px;
+        color: $Paleblue;
+        border: none;
+        border-radius: 8px;
+        margin: 0 auto;
+        display: block;
+        font-weight: 900;
+        font-size: 0.9em;
+        margin-bottom: 18px;
+        box-shadow: 1px 10px 8px 3px $Paleblue;
+        transition: background-color .3s;
+    
+        &:hover {
+            background-color: $Desaturatedblue;
+            cursor: pointer;
+        }
+    }
+    &__cancel {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $Desaturatedblue;
+        font-weight: 700;
+        font-size: .9em;
+    
+        &:hover {
+            color: $Darkblue;
+        }
+    }
+}
+
+.plan {
+    width: 280px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto 32px;
+    border-radius: 8px;
+    background-color: $Verypaleblue;
+
+    &__icon {
+        background-image: url('../images/icon-music.svg');
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+    }
+
+    &__payment:nth-child(1) {
+        color: $Darkblue;
+        font-weight: 900;
+        font-size: 1em;
+    }
+    &__payment:nth-child(2) {
+        color: $Desaturatedblue;
+    }
+    &__change {
+        color: $Brightblue;
+        font-size: .8em;
+        font-weight: 700;
+        margin-left: 30px;
+    
+        &:hover {
+            text-decoration: none;
+            color: $Desaturatedblue;
+        }
+    }
+}
+
+.attribution {
+    font-size: 14px; text-align: center;
+    padding: 10px;
+    
+    a {
+        color: hsl(228, 45%, 44%);   
+    }
+}
+
+@media (min-width: 944px) {
+    body {
+        background-image: url('../images/pattern-background-desktop.svg');
+        background-size: contain;
+    }
+    .main {
+        width: 408px;
+        height: 632px;
+        margin-bottom: 50px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8) ;
+    
+        &__title {
+            margin: 48px 0 24px;
+        }
+        &__paragraph {
+            margin-bottom: 20px;
+        }
+    }
+    .plan {
+        width: 316px;
+        height: 91px;
+        padding: 0 10px;
+        margin-bottom: 28px;
+    
+        &__change {
+            margin-left: 60px;
+        }
+    }
+    button {
+        width: 316px;
+        margin-bottom: 32px;
+    }
+}
